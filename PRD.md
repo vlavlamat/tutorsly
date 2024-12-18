@@ -1,8 +1,8 @@
 ## **Product Requirements Document (PRD)**
 **Project Name:** Tutorsly.org - Online Tutoring and Course Management Platform  
 **Version:** 1.0  
-**Date:** [Insert Date]  
-**Author(s):** [Your Name]
+**Date:** December 18, 2024  
+**Author(s):** Vladimir Matkovskii
 
 ---
 
