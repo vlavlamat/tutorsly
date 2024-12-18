@@ -85,7 +85,7 @@ tutorsly/                     # Root workspace for the project
 - **Rust** 1.59.0 or later
 - **Actix Web** 4.1.0 for building web servers.
 - **SQLx** for async database operations.
-- **PostgreSQL** as the relational database.
+- **PostgresSQL** as the relational database.
 - **dotenv** for managing environment variables.
 
 Install all dependencies using Cargo:
@@ -101,23 +101,23 @@ cargo check
 Make sure PostgreSQL is installed. Create a database and user:
 
 ```sql
-CREATE DATABASE ezytutors;
+CREATE DATABASE tutorsly;
 CREATE USER truuser WITH PASSWORD 'mypassword';
-GRANT ALL PRIVILEGES ON DATABASE ezytutors TO truuser;
+GRANT ALL PRIVILEGES ON DATABASE tutorsly TO truuser;
 ```
 
 ### 2. Run the SQL Script
 Set up the schema for the database:
 
 ```bash
-psql -U truuser -d ezytutors -f src/database.sql
+psql -U truuser -d tutorsly -f src/database.sql
 ```
 
 ### 3. Set Environment Variables
 Create a `.env` file in the project root:
 
 ```plaintext
-DATABASE_URL=postgres://truuser:mypassword@127.0.0.1:5432/ezytutors
+DATABASE_URL=postgres://truuser:mypassword@127.0.0.1:5432/tutorsly
 ```
 
 ### 4. Run the Service
