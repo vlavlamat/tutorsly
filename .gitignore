@@ -1,0 +1,79 @@
+# Ignoring target directory
+/target
+
+# Ignoring build artifacts and temporary files
+**/*.rs.bk
+**/*.rmeta
+**/*.dSYM
+
+# Ignoring Cargo.lock if you are building libraries (optional)
+# Uncomment if working on libraries
+# Cargo.lock
+
+# Build script and dependency outputs
+/build.rs
+
+# Debugging files
+*.out
+*.err
+*.trace
+
+# Ignoring IDE-specific files
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# RustRover / Rust-specific JetBrains IDEs
+*.rustc_info.json
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Ignoring environment variables and credentials
+.env
+.env.*
+
+# Ignoring database artifacts and test data
+/database.sql.bak
+*.db
+*.sqlite
+*.sqlite3
+*.sql.bk
+
+# Ignoring test outputs and coverage reports
+/tests/output/
+/tests/tmp/
+/coverage/
+
+# Logs
+/log/
+/logs/
+
+# Ignoring binary outputs from `cargo run --bin`
+/bin/
+**/iter1
+**/iter2
+
+# Ignoring `cargo check` and incremental compilation artifacts
+/cargo-check.lock
+
+# Ignoring dependency target outputs
+**/target/
+
+# Ignoring generated files and backups
+*.bak
+*.old
+
+# Miscellaneous system-specific files
+Thumbs.db
+._*
+.Spotlight-V100
+.Trash-*
