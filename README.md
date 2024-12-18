@@ -20,31 +20,61 @@ A RESTful web service built with Rust, leveraging the Actix Web framework and Po
 
 ```plaintext
 
-tutorsly/
-├── src/
-│   ├── bin/
-│   │   ├── iter5.rs             # Main application entry point
-│   ├── iter5/
-│   │   ├── dbaccess/            # Methods for database access
-│   │   │   ├── course.rs        # Database operations for courses
-│   │   │   ├── tutor.rs         # Database operations for tutors
-│   │   │   ├── mod.rs           # Module definition for dbaccess
-│   │   ├── handlers/            # HTTP request handlers
-│   │   │   ├── course.rs        # Handlers for course-related APIs
-│   │   │   ├── tutor.rs         # Handlers for tutor-related APIs
-│   │   │   ├── general.rs       # General handlers (e.g., health-check)
-│   │   │   ├── mod.rs           # Module definition for handlers
-│   │   ├── models/              # Data models
-│   │   │   ├── course.rs        # Course data model
-│   │   │   ├── tutor.rs         # Tutor data model
-│   │   │   ├── mod.rs           # Module definition for models
-│   │   ├── dbscripts/           # SQL scripts for database initialization
-│   │   │   ├── course.sql       # SQL script for creating course table
-│   │   ├── routes.rs            # API route definitions
-│   │   ├── state.rs             # Shared application state
-│   │   ├── errors.rs            # Error handling definitions
-├── .env                         # Environment variables (not committed to Git)
-├── Cargo.toml                   # Project configuration and dependencies
+tutorsly/                     # Root workspace for the project
+├── PRD.md                    # Product document describing project goals and objectives
+├── SPEC.md                   # Technical specification of the project
+├── README.md                 # General project description
+├── Cargo.toml                # Workspace configuration file
+├── .env                      # Environment variables (not added to Git)
+├── src/                      # General folder containing application logic
+│   ├── bin/                  # Main entry points for different iterations
+│   │   ├── iter5.rs          # Final main application entry point
+│   │   ├── iter1.rs          # Test implementation from Chapter 1
+│   ├── iter5/                # Final application implementation
+│   │   ├── dbaccess/         # Database access methods
+│   │   │   ├── course.rs     # Database operations for the courses table
+│   │   │   ├── tutor.rs      # Database operations for the tutors table
+│   │   │   ├── mod.rs        # Module definition for dbaccess
+│   │   ├── handlers/         # HTTP request handlers
+│   │   │   ├── course.rs     # Handlers for course-related APIs
+│   │   │   ├── tutor.rs      # Handlers for tutor-related APIs
+│   │   │   ├── general.rs    # General handlers (e.g., health-check)
+│   │   │   ├── mod.rs        # Module definition for handlers
+│   │   ├── models/           # Data models for the application
+│   │   │   ├── course.rs     # Data model for courses
+│   │   │   ├── tutor.rs      # Data model for tutors
+│   │   │   ├── mod.rs        # Module definition for models
+│   │   ├── dbscripts/        # SQL scripts for database initialization
+│   │   │   ├── course.sql    # Script to create the courses table
+│   │   │   ├── tutor.sql     # Script to create the tutors table
+│   │   ├── routes.rs         # API route definitions
+│   │   ├── state.rs          # Shared application state
+│   │   ├── errors.rs         # Error handling definitions
+├── tutor-nodb/               # In-memory data storage implementation (for earlier chapters)
+│   ├── src/
+│   │   ├── main.rs           # Main service logic
+│   │   ├── handlers.rs       # HTTP request handlers
+│   │   ├── models.rs         # Data models for in-memory storage
+│   │   ├── routes.rs         # API route definitions
+│   │   └── state.rs          # Shared application state
+│   ├── tests/                # Unit tests for the in-memory implementation
+│   ├── Cargo.toml            # Configuration for this subproject
+├── tutor-db/                 # Database-backed implementation
+│   ├── src/
+│   │   ├── main.rs           # Main service logic
+│   │   ├── handlers.rs       # HTTP request handlers
+│   │   ├── models.rs         # Data models for the database
+│   │   ├── routes.rs         # API route definitions
+│   │   └── state.rs          # Shared application state
+│   ├── migrations/           # Database migration scripts
+│   │   ├── V1__create_course_table.sql
+│   │   ├── V2__add_tutor_table.sql
+│   ├── tests/                # Unit tests for the database implementation
+│   ├── .env                  # Database configuration
+│   ├── Cargo.toml            # Configuration for this subproject
+├── tests/                    # Integration tests for the overall project
+│   ├── integration_tests.rs  # API integration tests
+
 
 ```
 
