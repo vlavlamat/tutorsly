@@ -23,6 +23,7 @@ A RESTful web service built with Rust, leveraging the Actix Web framework and Po
 tutorsly/                     # Root workspace for the project
 ├── PRD.md                    # Product document describing project goals and objectives
 ├── SPEC.md                   # Technical specification of the project
+├── LICENSE.md                # Project LICENSE
 ├── README.md                 # General project description
 ├── Cargo.toml                # Workspace configuration file
 ├── .env                      # Environment variables (not added to Git)
