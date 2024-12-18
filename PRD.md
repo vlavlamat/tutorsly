@@ -1,7 +1,7 @@
 ## **Product Requirements Document (PRD)**
 **Project Name:** Tutorsly.org - Online Tutoring and Course Management Platform  
 **Version:** 1.0  
-**Date:** December 18, 2024  
+**Date:** December 18, 2024,  
 **Author(s):** Vladimir Matkovskii
 
 ---
@@ -93,14 +93,13 @@ Tutorsly.org is a web platform that connects tutors with students by providing a
 
 ### **9. Appendices**
 - **API Documentation:** [Link to SPEC.md once created]
-- **Database Schema:** Defined in the migrations folder.
+- **Database Schema:** Defined in the migrations' folder.
 - **References:**
     - Rust documentation: [https://doc.rust-lang.org](https://doc.rust-lang.org)
     - Actix Web: [https://actix.rs](https://actix.rs)
 
 ---
 
-### **Volume**
-This PRD is concise but covers all key aspects (approximately 2-3 pages). It is sufficient for initiating development and can be iteratively refined during the project lifecycle.
+This PRD provides a clear and detailed product vision for Tutorsly.org and can be iteratively refined to ensure alignment with project goals and stakeholder expectations. Let me know if you'd like to expand or adjust any sections further! 🚀
 
 ---
