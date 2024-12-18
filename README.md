@@ -19,21 +19,33 @@ A RESTful web service built with Rust, leveraging the Actix Web framework and Po
 ## 📂 Project Structure
 
 ```plaintext
-.
-├── Cargo.toml                # Project dependencies and metadata
-├── .env                      # Database credentials
+
+tutorsly/
 ├── src/
 │   ├── bin/
-│   │   ├── iter1.rs          # Initial DB connection test
-│   │   ├── iter2.rs          # Actix web service main function
-│   ├── iter2/
-│   │   ├── models.rs         # Data model for courses
-│   │   ├── state.rs          # App state shared across threads
-│   │   ├── routes.rs         # Route definitions
-│   │   ├── handlers.rs       # Handlers for course-related APIs
-│   └── database.sql          # SQL script to set up PostgreSQL table
-├── tests/                    # Integration and unit tests
-└── README.md                 # This file
+│   │   ├── iter5.rs             # Main application entry point
+│   ├── iter5/
+│   │   ├── dbaccess/            # Methods for database access
+│   │   │   ├── course.rs        # Database operations for courses
+│   │   │   ├── tutor.rs         # Database operations for tutors
+│   │   │   ├── mod.rs           # Module definition for dbaccess
+│   │   ├── handlers/            # HTTP request handlers
+│   │   │   ├── course.rs        # Handlers for course-related APIs
+│   │   │   ├── tutor.rs         # Handlers for tutor-related APIs
+│   │   │   ├── general.rs       # General handlers (e.g., health-check)
+│   │   │   ├── mod.rs           # Module definition for handlers
+│   │   ├── models/              # Data models
+│   │   │   ├── course.rs        # Course data model
+│   │   │   ├── tutor.rs         # Tutor data model
+│   │   │   ├── mod.rs           # Module definition for models
+│   │   ├── dbscripts/           # SQL scripts for database initialization
+│   │   │   ├── course.sql       # SQL script for creating course table
+│   │   ├── routes.rs            # API route definitions
+│   │   ├── state.rs             # Shared application state
+│   │   ├── errors.rs            # Error handling definitions
+├── .env                         # Environment variables (not committed to Git)
+├── Cargo.toml                   # Project configuration and dependencies
+
 ```
 
 ---
